@@ -6,7 +6,7 @@ class AnyController {
     anyMethod(request: Request, response: Response) {
         const any = new Any();
 
-        response.json({ message: 'teste' })
+        response.json({ message: 'Any Message' })
     }
 }
 
