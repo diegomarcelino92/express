@@ -1,5 +1,5 @@
-export default class Any {
-    a: string;
+class Any {
 
-    b: number
 }
+
+export default Any
