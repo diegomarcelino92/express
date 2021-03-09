@@ -1,10 +1,7 @@
-import Any from "@models/Any";
+import Any from '@models/Any';
 
-
-
-
-export class AnyController {
+export default class AnyController {
     anyMethod() {
-        const any = new Any()
+        const any = new Any();
     }
 }

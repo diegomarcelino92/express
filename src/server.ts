@@ -1,10 +1,9 @@
-import express from 'express'
-import AnyController from '@controllers/AnyController'
+import express from 'express';
 
-const app = express()
+import AnyController from '@controllers/AnyController';
 
-app.get('/', (request, response) => {
-    return response.json({ message: 'Teste' })
-})
+const app = express();
 
-app.listen(3001)
+app.get('/', AnyController.anyMethod);
+
+app.listen(3001);
