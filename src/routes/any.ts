@@ -1,9 +1,9 @@
-import { Router } from 'express'
+import { Router } from 'express';
 
-import AnyController from '@controllers/AnyController'
+import AnyController from '@controllers/AnyController';
 
-const router = Router()
+const router = Router();
 
-router.get('/any', AnyController.anyMethod)
+router.get('/any', AnyController.anyMethod);
 
-export default router
+export default router;

@@ -1,5 +1,3 @@
-class Any {
+class Any {}
 
-}
-
-export default Any
+export default Any;
