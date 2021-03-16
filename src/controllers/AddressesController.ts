@@ -12,13 +12,15 @@ class AddressController {
 
     try {
       if (formattedCep.length !== 8) {
-        // TODO: Criar constrolador de erros
+        // TODO: Criar controlador de erros
         const error = { message: 'Invalid Cep' };
 
         throw error;
       }
 
       const data = await getAddress(formattedCep);
+
+      if (data.erro) throw data;
 
       const address = await Address.create(data);
 
