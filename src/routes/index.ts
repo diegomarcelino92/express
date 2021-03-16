@@ -1,7 +1,5 @@
-import any from './any';
-import other from './other';
+import address from './addresses';
 
 export default [
-  any,
-  other,
+  address,
 ];

@@ -15,6 +15,9 @@
       "@models/*": [
         "./src/models/*"
       ],
+      "@config/*": [
+        "./src/configuration/*"
+      ],
     },
     "typeRoots": [
       "./node_modules/@types",
