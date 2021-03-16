@@ -18,6 +18,12 @@
       "@config/*": [
         "./src/configuration/*"
       ],
+      "@middlewares/*": [
+        "./src/middlewares/*"
+      ],
+      "@services/*": [
+        "./src/services/*"
+      ],
     },
     "typeRoots": [
       "./node_modules/@types",

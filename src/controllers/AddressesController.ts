@@ -1,12 +1,33 @@
-import Address from '@models/Address';
-
 import { Response, Request } from 'express';
 
-class AddressController {
-  index(request: Request, response: Response) {
-    const any = new Address();
+import Address from '@models/Address';
+import getAddress from '@services/viacep';
+import Redis from '@services/redis';
 
-    response.json({ message: 'Any Message' });
+class AddressController {
+  async index(request: Request, response: Response) {
+    const { cep } = request.params;
+
+    const formattedCep = cep.replace(/\D/g, '');
+
+    try {
+      if (formattedCep.length !== 8) {
+        // TODO: Criar constrolador de erros
+        const error = { message: 'Invalid Cep' };
+
+        throw error;
+      }
+
+      const data = await getAddress(formattedCep);
+
+      const address = await Address.create(data);
+
+      Redis.setCache(formattedCep, JSON.stringify(address));
+
+      return response.json(address);
+    } catch (error) {
+      return response.status(400).json(error);
+    }
   }
 }
 

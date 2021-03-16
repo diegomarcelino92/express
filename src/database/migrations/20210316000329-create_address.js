@@ -1,8 +1,13 @@
 module.exports = {
   up: async (queryInterface, Sequelize) => queryInterface.createTable('addresses', {
+    id: {
+      type: Sequelize.INTEGER,
+      primaryKey: true,
+      autoIncrement: true,
+      allowNull: false,
+    },
     cep: {
       type: Sequelize.STRING,
-      primaryKey: true,
       allowNull: false,
     },
     logradouro: {
@@ -39,6 +44,14 @@ module.exports = {
     },
     siafi: {
       type: Sequelize.STRING,
+      allowNull: false,
+    },
+    created_at: {
+      type: Sequelize.DATE,
+      allowNull: false,
+    },
+    updated_at: {
+      type: Sequelize.DATE,
       allowNull: false,
     },
   }),
