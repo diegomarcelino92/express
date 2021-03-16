@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "ts-node-dev -r tsconfig-paths/register --respawn --ignore-watch node_modules src/server.ts"
+    "dev": "ts-node-dev -r tsconfig-paths/register --respawn --ignore-watch node_modules src/server.ts",
+    "db:migrate": "sequelize db:migrate",
+    "db:create": "sequelize db:create"
   },
   "keywords": [],
   "author": "",

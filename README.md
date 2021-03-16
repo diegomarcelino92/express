@@ -21,3 +21,11 @@ Instalação das dependências.
 
 Roda aplicação em desenvolvimento.
 Abra [http://localhost:3333](http://localhost:3333) .
+
+### `yarn db:create`
+
+Cria a o banco de dados
+
+### `yarn db:migrate`
+
+Cria as migrations no BD
