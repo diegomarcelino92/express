@@ -3,6 +3,7 @@ import {
 } from 'sequelize';
 
 interface AddressAttributes {
+  id: number;
   cep: string;
   logradouro: string;
   complemento: string;
@@ -19,6 +20,7 @@ interface AddressCreationAttributes extends AddressAttributes { }
 
 class Address extends Model<AddressAttributes, AddressCreationAttributes>
   implements AddressAttributes {
+  public id!: number;
   public cep!: string;
   public logradouro!: string;
   public complemento!: string;
@@ -32,6 +34,10 @@ class Address extends Model<AddressAttributes, AddressCreationAttributes>
 
   static initialize(sequelize: Sequelize) {
     return this.init({
+      id: {
+        primaryKey: true,
+        type: DataTypes.NUMBER,
+      },
       cep: DataTypes.STRING,
       logradouro: DataTypes.STRING,
       complemento: DataTypes.STRING,

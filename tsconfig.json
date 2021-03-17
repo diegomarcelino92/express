@@ -2,9 +2,12 @@
   "compilerOptions": {
     "target": "es2020",
     "module": "commonjs",
+    "lib": [
+      "es6"
+    ],
     "allowJs": true,
     "outDir": "./dist",
-    "rootDir": "./src",
+    "rootDir": ".",
     "removeComments": true,
     "strict": true,
     "baseUrl": ".",
@@ -16,7 +19,7 @@
         "./src/models/*"
       ],
       "@config/*": [
-        "./src/configuration/*"
+        "src/configurations/*"
       ],
       "@middlewares/*": [
         "./src/middlewares/*"
@@ -24,13 +27,22 @@
       "@services/*": [
         "./src/services/*"
       ],
+      "@formatters": [
+        "./src/utils/formatters"
+      ],
+      "@connection": [
+        "./src/database"
+      ],
     },
     "typeRoots": [
       "./node_modules/@types",
-      ".src/@types"
+      "./src/@types"
     ],
     "esModuleInterop": true,
     "skipLibCheck": true,
+    "resolveJsonModule": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
     "forceConsistentCasingInFileNames": true
   }
 }
