@@ -2,7 +2,7 @@ import {
   DataTypes, Model, Sequelize,
 } from 'sequelize';
 
-interface UserAttributes {
+interface AddressAttributes {
   cep: string;
   logradouro: string;
   complemento: string;
@@ -15,9 +15,10 @@ interface UserAttributes {
   siafi: string;
 }
 
-interface UserCreationAttributes extends UserAttributes { }
+interface AddressCreationAttributes extends AddressAttributes { }
 
-class Address extends Model<UserAttributes, UserCreationAttributes> implements UserAttributes {
+class Address extends Model<AddressAttributes, AddressCreationAttributes>
+  implements AddressAttributes {
   public cep!: string;
   public logradouro!: string;
   public complemento!: string;

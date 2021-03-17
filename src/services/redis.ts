@@ -2,7 +2,7 @@ import { NextFunction, Request, Response } from 'express';
 import redis, { RedisClient } from 'redis';
 
 class Redis {
-  client: RedisClient
+  client: RedisClient;
 
   constructor() {
     this.client = redis.createClient();
