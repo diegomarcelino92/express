@@ -1,6 +1,6 @@
 # PROJETO EXPRESS, SEQUELIZE ORM E REDIS
 
-Projeto faz consulta na API pública VIACEP, a partir da url /address/:cep.
+Projeto com Express JS, Sequelize e Redis, consulta na API pública VIACEP a partir da rota /address/:cep.
 
 ## Requisitos
 
