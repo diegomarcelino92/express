@@ -9,7 +9,7 @@ Projeto com Express JS, Sequelize e Redis, consulta na API pública VIACEP a par
 - [Redis](https://redis.io/);
 - [PostgresSQL](https://www.postgresql.org/download/).
 
-## Script Disponíveis
+## Scripts disponíveis
 
 Na raiz do projeto:
 
