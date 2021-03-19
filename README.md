@@ -26,6 +26,10 @@ Abra [http://localhost:3333](http://localhost:3333) .
 
 Cria a o banco de dados
 
+### `yarn db:migrate`
+
+Executa as migrations na base de dados
+
 ### `yarn test`
 
 Executa testes com automatizados com jest
