@@ -9,7 +9,7 @@ Projeto com Express JS, Sequelize e Redis, consulta na API pública VIACEP a par
 - [Redis](https://redis.io/);
 - [PostgresSQL](https://www.postgresql.org/download/).
 
-## Script Disponíveis
+## Scripts disponíveis
 
 Na raiz do projeto:
 
@@ -25,6 +25,10 @@ Abra [http://localhost:3333](http://localhost:3333) .
 ### `yarn db:create`
 
 Cria a o banco de dados
+
+### `yarn db:migrate`
+
+Executa as migrations na base de dados
 
 ### `yarn test`
 
